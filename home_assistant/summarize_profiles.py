@@ -16,8 +16,7 @@ def chat_ollama(prompt):
     print("Ollama hostname:", ollama_hostname)
 
     client = Client(
-    host=f'http://{ollama_hostname}:11434',
-    headers={'x-some-header': 'some-value'}
+        host=f'http://{ollama_hostname}:11434'
     )
     response = client.chat(model='llama3.1:8b', messages=[
         {
